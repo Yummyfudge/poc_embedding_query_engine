@@ -1,4 +1,4 @@
-# pdf_to_parse_poc
+# Evidence‑First Document Query Engine (POC)
 
 ## What this is
 
@@ -70,9 +70,11 @@ Solving that — via richer metadata, entity mapping, and domain‑specific repr
 
 Until then, this engine is designed to be *inspectable*, *auditable*, and *conservative*.
 
-## Quickstart
+## Minimal Demonstration (End‑to‑End)
 
-> This repo is designed for **evidence-first querying**: find *where* a fact appears and cite it, before attempting to “understand” it.
+> This section demonstrates the smallest complete path from a raw PDF to an evidence‑bound answer.
+>
+> Nothing here is meant to be magical or automatic. Each step exists so the system’s behavior can be inspected, repeated, and challenged.
 
 There are two distinct phases: Intake (one‑time, per document) and Query (repeatable, evidence‑first).
 
@@ -138,10 +140,12 @@ python scripts/render_latest_query_run.py
 
 This writes `report.md` (and `report.pdf` if ReportLab is installed) under `out/parsed_query_runs/`.
 
-## Outputs
+## Artifacts and Outputs
 
 - `out/traces/` — per-run trace transcripts (JSONL/NDJSON). These are meant to be inspectable and diffable.
 - `out/parsed_query_runs/` — rendered run reports (`report.md` / `report.pdf`) that gather the selected chunks into a readable artifact.
+- `out/pages_txt/` — page text files
+- `out/pages.jsonl` — page index (one JSON record per page)
 
 > `out/` is intentionally ignored and should not be committed.
 
@@ -243,11 +247,6 @@ Planned improvements and cleanup:
 - **Cleanup**
   - Remove legacy scripts once the new engine is stable
   - Reduce POC‑era duplication
-
-## Outputs
-
-- `out/pages_txt/` — page text files
-- `out/pages.jsonl` — page index (one JSON record per page)
 
 ## Safety
 
