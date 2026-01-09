@@ -1,0 +1,2 @@
+Fixture text for page 0006 chunk 01
+Decision dated 2023-12-12.

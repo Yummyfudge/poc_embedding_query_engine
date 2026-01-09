@@ -1,0 +1,51 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pdf-to-parse-poc"
+version = "0.0.0"
+description = "Emergency PDF intake: page text extraction + indexing + Postgres registry."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "Proprietary" }
+authors = [{ name = "Joe (yummyfudge)" }]
+dependencies = [
+  "pymupdf>=1.24",
+  "psycopg[binary]>=3.2",
+  "python-dotenv>=1.0",
+  "rich>=13.0",
+  "tqdm>=4.66",
+  "typer>=0.12",
+  "pydantic>=2.7",
+  "litellm",
+  "numpy>=1.26",
+]
+
+[project.urls]
+Repository = "CHANGEME"
+Issues = "CHANGEME"
+
+[project.optional-dependencies]
+dev = [
+  "ruff>=0.6",
+  "pytest>=8.0",
+  "ipython>=8.0",
+]
+nlp = [
+  # Optional: enable later if you want local embeddings without APIs
+  "sentence-transformers>=3.0",
+  "faiss-cpu>=1.8",
+]
+render = [
+  "reportlab>=4.0",
+]
+
+[project.scripts]
+# NOTE: pdfpoc CLI is a placeholder until the package CLI module is added.
+pdfpoc-run = "scripts.run_query:main"
+pdfpoc = "pdf_to_parse_poc.cli:app"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

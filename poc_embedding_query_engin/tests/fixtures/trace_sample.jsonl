@@ -1,0 +1,3 @@
+{"ts_utc":"2025-12-29T00:00:01Z","stream":"stdout","text":"[retrieval] Top 25 fused chunks:\n"}
+{"ts_utc":"2025-12-29T00:00:02Z","stream":"stdout","text":"  #1 score=0.7542 page=1247 chunk_id=24ec9ad6-9f23-4ab4-8188-d10c0d90ca92 probes=['Benefit approval date']\n"}
+{"ts_utc":"2025-12-29T00:00:03Z","stream":"stdout","text":"  #2 score=0.7123 page=1321 chunk_id=76ee341b-305a-448f-b2fb-e56e78269f32 probes=['Decision effective dates','Adverse benefit']\n"}

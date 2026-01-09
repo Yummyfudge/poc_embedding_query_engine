@@ -1,0 +1,2 @@
+-- Intentionally left minimal; we will paste the final schema DDL here when ready.
+-- (Keeping this file lets us track schema evolution in git.)

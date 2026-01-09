@@ -1,0 +1,13 @@
+name: pdf_to_parse_poc
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - numpy
+  # All other Python deps are managed by pyproject.toml.
+  # After creating the env, install the project:
+  #   pip install -e .
+  # Optional extras:
+  #   pip install -e ".[render]"   # PDF report generation
+  #   pip install -e ".[dev]"      # developer tools

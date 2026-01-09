@@ -1,0 +1,105 @@
+# ---------------------------------------------------------------------------
+# Example .gitignore for pdf_to_parse_poc
+#
+# This file is a *template* meant to be copied to `.gitignore` by users.
+# It intentionally excludes local data, secrets, outputs, and PHI/PII.
+# ---------------------------------------------------------------------------
+
+# --------------------
+# macOS
+# --------------------
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# --------------------
+# Python / build
+# --------------------
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.eggs/
+dist/
+build/
+pip-wheel-metadata/
+
+# --------------------
+# Test / coverage
+# --------------------
+.pytest_cache/
+.mypy_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# --------------------
+# Virtualenv / Conda
+# --------------------
+.venv/
+venv/
+ENV/
+env/
+.conda/
+conda-meta/
+*.conda
+*.conda-lock
+*.lock
+*.envrc
+
+# --------------------
+# Jupyter
+# --------------------
+.ipynb_checkpoints/
+
+# --------------------
+# IDEs / editors
+# --------------------
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+
+# --------------------
+# Project runtime outputs (LOCAL ONLY)
+# --------------------
+out/
+tmp/
+console_output_from_run
+
+# Granular (kept for clarity if out/ is later narrowed)
+out/parsed_query_runs/
+out/traces/
+out/embeddings/
+out/runs/
+out/chunks_txt/
+out/pages_txt/
+
+# --------------------
+# Inputs that may contain PHI / PII
+# --------------------
+*.pdf
+
+# --------------------
+# Local-only configuration (DO NOT COMMIT)
+# --------------------
+config/runtime.env
+.env
+.env.*
+*.local.env
+
+# --------------------
+# Secrets / credentials
+# --------------------
+*.key
+*.crt
+*.pem
+
+# --------------------
+# Utility / host-specific scripts
+# --------------------
+scripts/to_linux.sh
+scripts/logs_to_mac.sh
